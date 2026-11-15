@@ -1,0 +1,25 @@
+# Dependencies and build output
+node_modules/
+dist/
+.astro/
+
+# Secrets: never commit these (CLAUDE.md rule 23-24)
+.env
+.env.*
+!.env.example
+.dev.vars
+
+# Local databases (Wrangler keeps local D1 here)
+.wrangler/
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# Raw fetched data must never be committed
+data/raw/
+
+# Editor and OS clutter
+.vscode/
+.DS_Store
+Thumbs.db
