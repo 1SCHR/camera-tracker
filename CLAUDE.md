@@ -49,7 +49,7 @@ A free price-history and restock site for new, open-box, refurbished and used ca
 ### Alerts and ethics
 17. Free and paid users get restock alerts at the **same time**. Never build anything that sells speed.
 18. No auto-buy, no add-to-cart links, no queue-bypass tips. Links go to the product page only.
-19. Hot new items link to authorized retailers and manufacturer stores only.
+19. Hot new items link to authorized retailers only. Link to a manufacturer's store only if the manufacturer has given written permission (the Fujifilm US store's terms forbid links from commercial sites without it).
 20. No public API, RSS or webhook for scarce items.
 21. Signup uses double opt-in and Cloudflare Turnstile. Rate-limit alerts per user per day and per product.
 22. Links are ranked by price and availability, never by commission.
@@ -89,6 +89,21 @@ Comparison sellers (who counts toward each condition's median):
 - **Marketplace listings** (for example eBay), in any condition, are **never** in a median. They're shown separately and labeled **"asking prices"**, because they're active listings, not sold prices.
 
 Refurb labeling: only the manufacturer's own certified refurbs go in `mfr_refurb`. A dealer's own "refurbished" label goes in `seller_refurb`. Manufacturer refurbished is always its own condition and is never blended with used or seller refurbished.
+
+## Seed data (product catalog)
+
+- Seed products live in `seed/<brand>.json`, one product per entry with its variants and a list of dated MSRP rows.
+- **Every value carries a source URL.** Anything that can't be found on an acceptable source stays `"unknown"`. Never guess, never fill in from memory. `null` means "doesn't apply" (for example, color on a lens sold in one color), which is different from unknown.
+- The loader refuses a product if a required field (`model_name`, `type`, `status`, and `mount` for bodies and lenses) is unknown.
+- Acceptable sources, recorded as `source_type`:
+  - `manufacturer`: the manufacturer's own product pages, store and press releases. Everything except GTIN must come from here.
+  - GTIN only, in addition: `gs1` (GS1's official lookup), `box` (read off a real box), and `retailer`. A `retailer` GTIN needs **two independent authorized retailers showing the same number**, and both URLs are recorded.
+  - Every GTIN must pass its check digit. A wrong GTIN is costly because the matcher trusts barcodes most.
+- MSRP: launch MSRP from the press release, current MSRP from the manufacturer store's regular price. A sale price is never an MSRP.
+- Limited editions are skipped at launch. If one shows up in real listings, the review queue surfaces it.
+- Scope for Fujifilm: current X and GFX bodies, their common kits, the most-traded XF/XC/GF lenses, and popular discontinued bodies (the used market matters most).
+- Data is gathered in batches (about 10 products at first). I spot-check about one in ten entries against the source page before the next batch. Reading specs and part numbers off pages is where slipped digits and mixed-up kit names happen.
+- Reading manufacturer pages by hand for the seed still needs a row in `docs/terms-sheet.md` first.
 
 ## Code conventions
 

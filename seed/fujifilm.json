@@ -1,0 +1,102 @@
+{
+  "brand": { "name": "Fujifilm", "slug": "fujifilm" },
+  "batch": 1,
+  "checked_on": "2026-11-14",
+  "about": "Facts only, read by hand from fujifilm-x.com/en-us (see docs/terms-sheet.md). Every value has a source URL or is \"unknown\". \"variants\": \"unknown\" means no allowed source shows kits or colors yet, so no variants are created.",
+  "sources": {
+    "us_camera_lineup": "https://www.fujifilm-x.com/en-us/products/cameras/",
+    "us_lens_list_x_mount_filter": "https://www.fujifilm-x.com/en-us/products/lenses/ (Series filter set to 'X Mount')"
+  },
+  "products": [
+    {
+      "slug": "fujifilm-x-t5",
+      "model_name": { "value": "X-T5", "as_shown": "FUJIFILM X-T5", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t5/specifications/" },
+      "type": { "value": "body", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t5/specifications/" },
+      "mount": { "value": "Fujifilm X", "as_shown": "FUJIFILM X mount", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t5/specifications/" },
+      "announced_on": { "value": "2022-11-02", "source": "https://www.fujifilm-x.com/en-us/news/fujifilm-launches-fujifilm-x-t5/" },
+      "status": { "value": "current", "method": "no 'Discontinued' label on product page", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t5/" },
+      "variants": "unknown"
+    },
+    {
+      "slug": "fujifilm-x-s20",
+      "model_name": { "value": "X-S20", "as_shown": "FUJIFILM X-S20", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-s20/specifications/" },
+      "type": { "value": "body", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-s20/specifications/" },
+      "mount": { "value": "Fujifilm X", "as_shown": "FUJIFILM X mount", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-s20/specifications/" },
+      "announced_on": { "value": "unknown" },
+      "status": { "value": "current", "method": "no 'Discontinued' label on product page", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-s20/" },
+      "variants": "unknown"
+    },
+    {
+      "slug": "fujifilm-x-t50",
+      "model_name": { "value": "X-T50", "as_shown": "FUJIFILM X-T50", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t50/specifications/" },
+      "type": { "value": "body", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t50/specifications/" },
+      "mount": { "value": "Fujifilm X", "as_shown": "FUJIFILM X mount", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t50/specifications/" },
+      "announced_on": { "value": "unknown" },
+      "status": { "value": "current", "method": "no 'Discontinued' label on product page", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t50/" },
+      "variants": "unknown"
+    },
+    {
+      "slug": "fujifilm-x-h2",
+      "model_name": { "value": "X-H2", "as_shown": "FUJIFILM X-H2", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-h2/specifications/" },
+      "type": { "value": "body", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-h2/specifications/" },
+      "mount": { "value": "Fujifilm X", "as_shown": "FUJIFILM X mount", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-h2/specifications/" },
+      "announced_on": { "value": "unknown" },
+      "status": { "value": "current", "method": "no 'Discontinued' label on product page", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-h2/" },
+      "variants": "unknown"
+    },
+    {
+      "slug": "fujifilm-x100vi",
+      "model_name": { "value": "X100VI", "as_shown": "FUJIFILM X100VI", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x100vi/specifications/" },
+      "type": { "value": "compact", "why": "spec sheet lists a built-in lens ('FUJINON single focal length lens', f=23mm) and no lens mount", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x100vi/specifications/" },
+      "mount": null,
+      "announced_on": { "value": "unknown" },
+      "status": { "value": "current", "method": "no 'Discontinued' label on product page", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x100vi/" },
+      "variants": "unknown"
+    },
+    {
+      "slug": "fujifilm-gfx100s-ii",
+      "model_name": { "value": "GFX100S II", "as_shown": "FUJIFILM GFX100S II", "source": "https://www.fujifilm-x.com/en-us/products/cameras/gfx100s-ii/specifications/" },
+      "type": { "value": "body", "source": "https://www.fujifilm-x.com/en-us/products/cameras/gfx100s-ii/specifications/" },
+      "mount": { "value": "Fujifilm G", "as_shown": "FUJIFILM G mount", "source": "https://www.fujifilm-x.com/en-us/products/cameras/gfx100s-ii/specifications/" },
+      "announced_on": { "value": "unknown" },
+      "status": { "value": "current", "method": "no 'Discontinued' label on product page", "source": "https://www.fujifilm-x.com/en-us/products/cameras/gfx100s-ii/" },
+      "variants": "unknown"
+    },
+    {
+      "slug": "fujifilm-x-t4",
+      "model_name": { "value": "X-T4", "as_shown": "FUJIFILM X-T4", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t4/" },
+      "type": { "value": "body", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t4/" },
+      "mount": { "value": "Fujifilm X", "as_shown": "FUJIFILM X mount", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t4/" },
+      "announced_on": { "value": "unknown" },
+      "status": { "value": "discontinued", "method": "product page shows a 'Discontinued' label", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t4/" },
+      "variants": "unknown"
+    },
+    {
+      "slug": "fujifilm-xf16-50mmf28-48-r-lm-wr",
+      "model_name": { "value": "XF16-50mmF2.8-4.8 R LM WR", "as_shown": "XF16-50mmF2.8-4.8 R LM WR", "source": "https://www.fujifilm-x.com/en-us/products/lenses/xf16-50mmf28-48-r-lm-wr/specifications/" },
+      "type": { "value": "lens", "source": "https://www.fujifilm-x.com/en-us/products/lenses/xf16-50mmf28-48-r-lm-wr/" },
+      "mount": { "value": "Fujifilm X", "method": "listed under the 'X Mount' series filter", "source": "https://www.fujifilm-x.com/en-us/products/lenses/" },
+      "announced_on": { "value": "unknown" },
+      "status": { "value": "current", "method": "no 'Discontinued' label on product page", "source": "https://www.fujifilm-x.com/en-us/products/lenses/xf16-50mmf28-48-r-lm-wr/" },
+      "variants": "unknown"
+    },
+    {
+      "slug": "fujifilm-xf33mmf14-r-lm-wr",
+      "model_name": { "value": "XF33mmF1.4 R LM WR", "as_shown": "XF33ｍｍF1.4 R LM WR (full-width 'ｍｍ' on the spec page)", "source": "https://www.fujifilm-x.com/en-us/products/lenses/xf33mmf14-r-lm-wr/specifications/" },
+      "type": { "value": "lens", "source": "https://www.fujifilm-x.com/en-us/products/lenses/xf33mmf14-r-lm-wr/" },
+      "mount": { "value": "Fujifilm X", "method": "listed under the 'X Mount' series filter", "source": "https://www.fujifilm-x.com/en-us/products/lenses/" },
+      "announced_on": { "value": "unknown" },
+      "status": { "value": "current", "method": "no 'Discontinued' label on product page", "source": "https://www.fujifilm-x.com/en-us/products/lenses/xf33mmf14-r-lm-wr/" },
+      "variants": "unknown"
+    },
+    {
+      "slug": "fujifilm-xf56mmf12-r-wr",
+      "model_name": { "value": "XF56mmF1.2 R WR", "as_shown": "FUJINON XF56ｍｍF1.2 R WR (full-width 'ｍｍ' on the spec page)", "source": "https://www.fujifilm-x.com/en-us/products/lenses/xf56mmf12-r-wr/specifications/" },
+      "type": { "value": "lens", "source": "https://www.fujifilm-x.com/en-us/products/lenses/xf56mmf12-r-wr/" },
+      "mount": { "value": "Fujifilm X", "method": "listed under the 'X Mount' series filter", "source": "https://www.fujifilm-x.com/en-us/products/lenses/" },
+      "announced_on": { "value": "unknown" },
+      "status": { "value": "current", "method": "no 'Discontinued' label on product page", "source": "https://www.fujifilm-x.com/en-us/products/lenses/xf56mmf12-r-wr/" },
+      "variants": "unknown"
+    }
+  ]
+}
