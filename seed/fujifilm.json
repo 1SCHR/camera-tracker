@@ -2,10 +2,13 @@
   "brand": { "name": "Fujifilm", "slug": "fujifilm" },
   "batch": 1,
   "checked_on": "2026-11-14",
-  "about": "Facts only, read by hand from fujifilm-x.com/en-us (see docs/terms-sheet.md). Every value has a source URL or is \"unknown\". \"variants\": \"unknown\" means no allowed source shows kits or colors yet, so no variants are created.",
+  "about": "Facts only, read by hand from fujifilm-x.com/en-us and newsroom-us.fujifilm.com (see docs/terms-sheet.md). Every value has a source URL or is \"unknown\". \"variants\": \"unknown\" means no allowed source lists any kit or color for that product yet. \"variants_complete\": false means the listed variants are the only ones an allowed source states, and others probably exist.",
   "sources": {
     "us_camera_lineup": "https://www.fujifilm-x.com/en-us/products/cameras/",
-    "us_lens_list_x_mount_filter": "https://www.fujifilm-x.com/en-us/products/lenses/ (Series filter set to 'X Mount')"
+    "us_lens_list_x_mount_filter": "https://www.fujifilm-x.com/en-us/products/lenses/ (Series filter set to 'X Mount')",
+    "pr_x_t50_xf16_50": "https://newsroom-us.fujifilm.com/press-releases/press-release-details/2024/Calling-All-Creatives-Fujifilm-Announces-FUJIFILM-X-T50-Mirrorless-Digital-Camera-and-FUJINON-XF16-50mmF2-8-4-8-R-LM-WR-Lens-05-16-2024/default.aspx",
+    "pr_x100vi": "https://newsroom-us.fujifilm.com/press-releases/press-release-details/2024/Fujifilm-Debuts-X100VI-Mirrorless-Digital-Camera-02-20-2024/default.aspx",
+    "pr_gfx100s_ii": "https://newsroom-us.fujifilm.com/press-releases/press-release-details/2024/Lightweight-High-Speed-Fujifilm-Introduces-FUJIFILM-GFX100S-II-Mirrorless-Digital-Camera-05-16-2024/default.aspx"
   },
   "products": [
     {
@@ -13,9 +16,19 @@
       "model_name": { "value": "X-T5", "as_shown": "FUJIFILM X-T5", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t5/specifications/" },
       "type": { "value": "body", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t5/specifications/" },
       "mount": { "value": "Fujifilm X", "as_shown": "FUJIFILM X mount", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t5/specifications/" },
-      "announced_on": { "value": "2022-11-02", "source": "https://www.fujifilm-x.com/en-us/news/fujifilm-launches-fujifilm-x-t5/" },
+      "announced_on": { "value": "2022-11-02", "basis": "Fujifilm Tokyo release reposted on the US product site", "source": "https://www.fujifilm-x.com/en-us/news/fujifilm-launches-fujifilm-x-t5/" },
       "status": { "value": "current", "method": "no 'Discontinued' label on product page", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t5/" },
-      "variants": "unknown"
+      "variants_complete": false,
+      "variants": [
+        {
+          "kit_contents": { "value": "with XF16-50mmF2.8-4.8 R LM WR", "source": "pr_x_t50_xf16_50" },
+          "color": { "value": "unknown" },
+          "is_bundle": false,
+          "gtin": { "value": "unknown" },
+          "mpn": { "value": "unknown" },
+          "msrp": [ { "region": "US", "price": "2099.95", "currency": "USD", "as_of": "2024-05-16", "kind": "launch of this kit", "source": "pr_x_t50_xf16_50" } ]
+        }
+      ]
     },
     {
       "slug": "fujifilm-x-s20",
@@ -24,16 +37,61 @@
       "mount": { "value": "Fujifilm X", "as_shown": "FUJIFILM X mount", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-s20/specifications/" },
       "announced_on": { "value": "unknown" },
       "status": { "value": "current", "method": "no 'Discontinued' label on product page", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-s20/" },
-      "variants": "unknown"
+      "variants_complete": false,
+      "variants": [
+        {
+          "kit_contents": { "value": "with XF16-50mmF2.8-4.8 R LM WR", "source": "pr_x_t50_xf16_50" },
+          "color": { "value": "unknown" },
+          "is_bundle": false,
+          "gtin": { "value": "unknown" },
+          "mpn": { "value": "unknown" },
+          "msrp": [ { "region": "US", "price": "1699.95", "currency": "USD", "as_of": "2024-05-16", "kind": "launch of this kit", "source": "pr_x_t50_xf16_50" } ]
+        }
+      ]
     },
     {
       "slug": "fujifilm-x-t50",
       "model_name": { "value": "X-T50", "as_shown": "FUJIFILM X-T50", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t50/specifications/" },
       "type": { "value": "body", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t50/specifications/" },
       "mount": { "value": "Fujifilm X", "as_shown": "FUJIFILM X mount", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t50/specifications/" },
-      "announced_on": { "value": "unknown" },
+      "announced_on": { "value": "2024-05-16", "basis": "US press release date", "source": "pr_x_t50_xf16_50" },
       "status": { "value": "current", "method": "no 'Discontinued' label on product page", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x-t50/" },
-      "variants": "unknown"
+      "variants_complete": false,
+      "skipped": "Kit with XC15-45mmF3.5-5.6 OIS PZ: the release only says Fujifilm 'plans to introduce' it. Add it once an allowed source shows it on sale.",
+      "variants": [
+        {
+          "kit_contents": { "value": "Body only", "method": "the release prices the camera on its own, separately from the lens kits", "source": "pr_x_t50_xf16_50" },
+          "color": { "value": "Black", "source": "pr_x_t50_xf16_50" },
+          "is_bundle": false,
+          "gtin": { "value": "unknown" },
+          "mpn": { "value": "unknown" },
+          "msrp": [ { "region": "US", "price": "1399.95", "currency": "USD", "as_of": "2024-05-16", "kind": "launch", "source": "pr_x_t50_xf16_50" } ]
+        },
+        {
+          "kit_contents": { "value": "Body only", "method": "the release prices the camera on its own, separately from the lens kits", "source": "pr_x_t50_xf16_50" },
+          "color": { "value": "Charcoal Silver", "source": "pr_x_t50_xf16_50" },
+          "is_bundle": false,
+          "gtin": { "value": "unknown" },
+          "mpn": { "value": "unknown" },
+          "msrp": [ { "region": "US", "price": "1399.95", "currency": "USD", "as_of": "2024-05-16", "kind": "launch", "source": "pr_x_t50_xf16_50" } ]
+        },
+        {
+          "kit_contents": { "value": "Body only", "method": "the release prices the camera on its own, separately from the lens kits", "source": "pr_x_t50_xf16_50" },
+          "color": { "value": "Silver", "source": "pr_x_t50_xf16_50" },
+          "is_bundle": false,
+          "gtin": { "value": "unknown" },
+          "mpn": { "value": "unknown" },
+          "msrp": [ { "region": "US", "price": "1399.95", "currency": "USD", "as_of": "2024-05-16", "kind": "launch", "source": "pr_x_t50_xf16_50" } ]
+        },
+        {
+          "kit_contents": { "value": "with XF16-50mmF2.8-4.8 R LM WR", "source": "pr_x_t50_xf16_50" },
+          "color": { "value": "unknown" },
+          "is_bundle": false,
+          "gtin": { "value": "unknown" },
+          "mpn": { "value": "unknown" },
+          "msrp": [ { "region": "US", "price": "1799.95", "currency": "USD", "as_of": "2024-05-16", "kind": "launch", "source": "pr_x_t50_xf16_50" } ]
+        }
+      ]
     },
     {
       "slug": "fujifilm-x-h2",
@@ -49,18 +107,39 @@
       "model_name": { "value": "X100VI", "as_shown": "FUJIFILM X100VI", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x100vi/specifications/" },
       "type": { "value": "compact", "why": "spec sheet lists a built-in lens ('FUJINON single focal length lens', f=23mm) and no lens mount", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x100vi/specifications/" },
       "mount": null,
-      "announced_on": { "value": "unknown" },
+      "announced_on": { "value": "2024-02-20", "basis": "US press release date", "source": "pr_x100vi" },
       "status": { "value": "current", "method": "no 'Discontinued' label on product page", "source": "https://www.fujifilm-x.com/en-us/products/cameras/x100vi/" },
-      "variants": "unknown"
+      "variants_complete": false,
+      "skipped": "X100VI Limited Edition (limited editions are skipped at launch, see CLAUDE.md)",
+      "variants": [
+        {
+          "kit_contents": { "value": "Camera only", "method": "fixed-lens camera; the release gives one standard MSRP", "source": "pr_x100vi" },
+          "color": { "value": "unknown", "note": "the release names colors only for accessories, not the camera" },
+          "is_bundle": false,
+          "gtin": { "value": "unknown" },
+          "mpn": { "value": "unknown" },
+          "msrp": [ { "region": "US", "price": "1599.95", "currency": "USD", "as_of": "2024-02-20", "kind": "launch", "source": "pr_x100vi" } ]
+        }
+      ]
     },
     {
       "slug": "fujifilm-gfx100s-ii",
       "model_name": { "value": "GFX100S II", "as_shown": "FUJIFILM GFX100S II", "source": "https://www.fujifilm-x.com/en-us/products/cameras/gfx100s-ii/specifications/" },
       "type": { "value": "body", "source": "https://www.fujifilm-x.com/en-us/products/cameras/gfx100s-ii/specifications/" },
       "mount": { "value": "Fujifilm G", "as_shown": "FUJIFILM G mount", "source": "https://www.fujifilm-x.com/en-us/products/cameras/gfx100s-ii/specifications/" },
-      "announced_on": { "value": "unknown" },
+      "announced_on": { "value": "2024-05-16", "basis": "US press release date", "source": "pr_gfx100s_ii" },
       "status": { "value": "current", "method": "no 'Discontinued' label on product page", "source": "https://www.fujifilm-x.com/en-us/products/cameras/gfx100s-ii/" },
-      "variants": "unknown"
+      "variants_complete": false,
+      "variants": [
+        {
+          "kit_contents": { "value": "Body only", "method": "the release prices the camera with no lens and lists no kit", "source": "pr_gfx100s_ii" },
+          "color": { "value": "unknown" },
+          "is_bundle": false,
+          "gtin": { "value": "unknown" },
+          "mpn": { "value": "unknown" },
+          "msrp": [ { "region": "US", "price": "4995.95", "currency": "USD", "as_of": "2024-05-16", "kind": "launch", "source": "pr_gfx100s_ii" } ]
+        }
+      ]
     },
     {
       "slug": "fujifilm-x-t4",
@@ -76,9 +155,19 @@
       "model_name": { "value": "XF16-50mmF2.8-4.8 R LM WR", "as_shown": "XF16-50mmF2.8-4.8 R LM WR", "source": "https://www.fujifilm-x.com/en-us/products/lenses/xf16-50mmf28-48-r-lm-wr/specifications/" },
       "type": { "value": "lens", "source": "https://www.fujifilm-x.com/en-us/products/lenses/xf16-50mmf28-48-r-lm-wr/" },
       "mount": { "value": "Fujifilm X", "method": "listed under the 'X Mount' series filter", "source": "https://www.fujifilm-x.com/en-us/products/lenses/" },
-      "announced_on": { "value": "unknown" },
+      "announced_on": { "value": "2024-05-16", "basis": "US press release date", "source": "pr_x_t50_xf16_50" },
       "status": { "value": "current", "method": "no 'Discontinued' label on product page", "source": "https://www.fujifilm-x.com/en-us/products/lenses/xf16-50mmf28-48-r-lm-wr/" },
-      "variants": "unknown"
+      "variants_complete": false,
+      "variants": [
+        {
+          "kit_contents": { "value": "Lens only", "source": "pr_x_t50_xf16_50" },
+          "color": { "value": "unknown" },
+          "is_bundle": false,
+          "gtin": { "value": "unknown" },
+          "mpn": { "value": "unknown" },
+          "msrp": [ { "region": "US", "price": "699.95", "currency": "USD", "as_of": "2024-05-16", "kind": "launch", "source": "pr_x_t50_xf16_50" } ]
+        }
+      ]
     },
     {
       "slug": "fujifilm-xf33mmf14-r-lm-wr",

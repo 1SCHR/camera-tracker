@@ -11,8 +11,9 @@ This repo is public, so everything here is visible. Quotes are kept short. Follo
 | shopusa.fujifilm-x.com (Fujifilm US store) | seed data, MSRP | manual reading | **No**: crawling, indexing and cataloguing need written consent; links need permission | Product pages allowed for `*`, but Anthropic crawlers blocked and `ai-train=no` | Crawl-delay 1 s | not stated | Possibly a UPC in some product URLs (not verified) | No | **not allowed** | 2026-11-14 |
 | www.fujifilm-x.com/en-us (X and GFX product info) | seed data: names, mounts, kits, colors, status | manual reading | Reading allowed; downloads "for personal, noncommercial purposes" only. **Owner's decision: facts-only use is OK** | Yes, and `Claude-User` is explicitly allowed | Crawl-delay 1–10 s by bot type | not stated | No price, part number or UPC on the X-T5 page | No | **allowed (facts only)** | 2026-11-14 |
 | www.fujifilm.com/us (US corporate site, press releases) | launch MSRP, announcement dates | manual reading | No ban on automated access; text and images may not be redistributed. **Owner's decision: facts-only use is OK** | Yes for `/us/en/...` pages | not stated | not stated | Not checked yet | No | **allowed (facts only)** | 2026-11-14 |
+| newsroom-us.fujifilm.com (FUJIFILM Americas News Hub) | US launch MSRP, kits, colors, announcement dates | manual reading | Same terms as fujifilm.com/us (its footer links there). **Owner's decision: facts-only use is OK** | Yes: `Allow: /` for all | Crawl-delay 10 s | not stated | Not checked yet | No | **allowed (facts only)** | 2026-11-14 |
 
-**Facts-only limits** (owner's decision, 2026-11-14) for the two sites marked "allowed (facts only)":
+**Facts-only limits** (owner's decision, 2026-11-14) for the sites marked "allowed (facts only)":
 
 - Record only factual values (model name, mount, kit contents, color, status, price, date), each with its source URL.
 - Copy no text and no images. No descriptions, marketing copy, spec tables or photos.
@@ -62,6 +63,16 @@ This repo is public, so everything here is visible. Quotes are kept short. Follo
 - **What's here:** US press releases, which normally state launch MSRP and announcement date. I haven't opened a US release yet to confirm this.
 - **Decision (2026-11-14):** the owner accepts facts-only use under the limits above.
 
+## newsroom-us.fujifilm.com: FUJIFILM Americas News Hub
+
+- **Operator:** FUJIFILM Americas. Old fujifilm.com/us press-release links redirect here.
+- **Terms:** the site's footer "Terms of Use" link goes to <https://fujifilm.com/us/en/terms>, the same terms as the fujifilm.com/us row (read 2026-11-14). The footer privacy link also goes to fujifilm.com/us.
+- **robots.txt:** <https://newsroom-us.fujifilm.com/robots.txt>, read 2026-11-14. `User-agent: *`, `Crawl-delay: 10`, `Allow: /`.
+- **What's here (checked 2026-11-14):** US press releases with US MSRPs, kit prices and sometimes colors, plus a release date (MM/DD/YYYY). No part numbers or UPCs.
+- **Gap:** the archive starts in 2022 and has only one release for all of 2022, so older launches (X-T5, X-H2, X-T4) aren't here. Nothing was found for the X-S20, XF33 or XF56 either.
+- **How to search it:** set the Year dropdown first, then the category. Setting them from a script doesn't reload the list.
+- **Decision (2026-11-14):** the owner extended the facts-only decision to this host, under the same limits. Pages are read by hand, at least 10 seconds apart (its crawl delay).
+
 ---
 
 ## Sources we still need rows for
@@ -70,7 +81,6 @@ Found while gathering seed batch 1 (2026-11-14). None of these has been reviewed
 
 | Source | Would give us | Why we need it |
 |---|---|---|
-| newsroom-us.fujifilm.com (FUJIFILM Americas News Hub) | US launch MSRP, kits and colors at launch, US announcement dates | Old fujifilm.com/us press-release links now redirect here. It's a different host, so it needs its own row. |
 | GS1 US lookup ("Verified by GS1") | GTINs (`source_type: gs1`) | Fujifilm's allowed sites show no barcodes. |
 | Authorized US retailers, at least two (for example B&H, Adorama, Best Buy) | GTINs (`source_type: retailer`, two must agree), part numbers, kit and color lists | These also need rows before any collector, so reviewing them now does double duty. |
 | Physical boxes | GTINs (`source_type: box`) | Your own or a friend's gear. No terms needed, but record who read it and when. |
