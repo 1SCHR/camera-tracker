@@ -134,6 +134,8 @@ Fill these in as the project takes shape:
 - Run one collector locally: `TODO`
 - Apply migrations locally: `npm run db:migrate:local` (builds the local D1 copy in `.wrangler/`)
 - List local D1 tables: `npm run db:tables:local`
+- Check the seed file: `npm run seed:check`
+- Load the seed into local D1: `npm run seed:local` (prints every change first; MSRP rows are never overwritten; rows removed from the seed are reported, not deleted). There is no production option on purpose (rule 30).
 - Deploy preview: push a branch. Production: merge to `main` (only with my approval).
 
 ## Open decisions (ask me, don't assume)

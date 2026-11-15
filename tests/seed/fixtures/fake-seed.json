@@ -1,0 +1,66 @@
+{
+  "about": "FAKE data for tests only. 'Testbrand' and every product, price and URL here are made up. seed.example is an allowed host only inside the tests.",
+  "brand": { "name": "Testbrand", "slug": "testbrand" },
+  "sources": {
+    "pr_tb1": "https://seed.example/news/tb-1-launch"
+  },
+  "products": [
+    {
+      "slug": "testbrand-tb-1",
+      "model_name": { "value": "TB-1", "source": "https://seed.example/products/tb-1/specs" },
+      "type": { "value": "body", "source": "https://seed.example/products/tb-1/specs" },
+      "mount": { "value": "Testbrand T", "source": "https://seed.example/products/tb-1/specs" },
+      "announced_on": { "value": "2025-03-10", "source": "pr_tb1" },
+      "status": { "value": "current", "source": "https://seed.example/products/tb-1" },
+      "variants": [
+        {
+          "kit_contents": { "value": "Body only", "source": "pr_tb1" },
+          "color": { "value": "Black", "source": "pr_tb1" },
+          "is_bundle": false,
+          "gtin": { "value": "012345678905", "source_type": "manufacturer", "source": "https://seed.example/products/tb-1/specs" },
+          "mpn": { "value": "unknown" },
+          "msrp": [
+            { "region": "US", "price": "999.95", "currency": "USD", "as_of": "2025-03-10", "source": "pr_tb1" }
+          ]
+        },
+        {
+          "kit_contents": { "value": "with TB 18mm F2", "source": "pr_tb1" },
+          "color": { "value": "unknown" },
+          "is_bundle": false,
+          "gtin": { "value": "unknown" },
+          "mpn": { "value": "unknown" },
+          "msrp": [
+            { "region": "US", "price": "1199.95", "currency": "USD", "as_of": "2025-03-10", "source": "pr_tb1" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "testbrand-tb-18mm-f2",
+      "model_name": { "value": "TB 18mm F2", "source": "https://seed.example/products/tb-18mm/specs" },
+      "type": { "value": "lens", "source": "https://seed.example/products/tb-18mm" },
+      "mount": { "value": "Testbrand T", "source": "https://seed.example/products/tb-18mm/specs" },
+      "announced_on": { "value": "unknown" },
+      "status": { "value": "current", "source": "https://seed.example/products/tb-18mm" },
+      "variants": [
+        {
+          "kit_contents": { "value": "Lens only", "source": "pr_tb1" },
+          "color": null,
+          "is_bundle": false,
+          "gtin": { "value": "unknown" },
+          "mpn": { "value": "unknown" },
+          "msrp": []
+        }
+      ]
+    },
+    {
+      "slug": "testbrand-tb-compact",
+      "model_name": { "value": "TB Compact", "source": "https://seed.example/products/tb-compact/specs" },
+      "type": { "value": "compact", "source": "https://seed.example/products/tb-compact/specs" },
+      "mount": null,
+      "announced_on": { "value": "unknown" },
+      "status": { "value": "discontinued", "source": "https://seed.example/products/tb-compact" },
+      "variants": "unknown"
+    }
+  ]
+}

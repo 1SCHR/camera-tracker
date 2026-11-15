@@ -5,10 +5,12 @@
   "description": "Free price-history and restock site for camera gear.",
   "type": "module",
   "engines": {
-    "node": ">=22.13"
+    "node": ">=22.18"
   },
   "scripts": {
     "test": "vitest run",
+    "seed:check": "node src/seed/load.ts seed/fujifilm.json --check",
+    "seed:local": "node src/seed/load.ts seed/fujifilm.json",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "db:migrate:local": "wrangler d1 migrations apply camera-tracker-db --local",
