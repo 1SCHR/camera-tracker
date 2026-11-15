@@ -1,0 +1,19 @@
+// Cloudflare (Wrangler) settings.
+// For now this only describes the D1 database, so `npm run db:migrate:local`
+// can build a local copy under .wrangler/ (which is gitignored).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "camera-tracker",
+  "compatibility_date": "2026-11-01",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "camera-tracker-db",
+      // Placeholder. Local development ignores it. The real ID is filled in
+      // when you create the D1 database in your Cloudflare account. An ID
+      // isn't a secret, but creating the database is your step, not mine.
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

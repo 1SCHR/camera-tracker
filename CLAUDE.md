@@ -15,7 +15,7 @@ A free price-history and restock site for new, open-box, refurbished and used ca
 
 ## Stack (confirmed 2026-11-14)
 
-- Language: TypeScript everywhere. Approved dependencies: TypeScript, Astro, Wrangler, Vitest.
+- Language: TypeScript everywhere. Approved dependencies: TypeScript, Astro, Wrangler, Vitest, @types/node. The esbuild and workerd install scripts stay blocked by npm until I approve them.
 - Code and scheduled jobs: **public** GitHub repository + GitHub Actions cron on a **30-minute** schedule. Anyone can read the code and the terms sheet, so nothing private goes in the repo.
 - Database: Cloudflare D1 (SQLite). Schema changes go in numbered migration files in `migrations/`.
 - Site: static site (Astro preferred) deployed on Cloudflare Pages. One page per product, built from the database.
@@ -81,10 +81,14 @@ Matching order: identifiers (GTIN/UPC/part number) first, title parsing second, 
 
 Fair-price score: (90-day median price in the same condition from comparison sellers − current price) ÷ 90-day median. Shown only with the minimum data in rule 11.
 
-Comparison sellers:
-- New: manufacturer and authorized dealers.
-- Refurbished and used: established used dealers only (for example MPB, KEH, and the used departments of B&H and Adorama).
-- Marketplace listings (for example eBay) are **never** in a median. They're shown separately and labeled **"asking prices"**, because they're active listings, not sold prices.
+Comparison sellers (who counts toward each condition's median):
+- **New:** manufacturer and authorized dealers.
+- **Open box:** authorized dealers (for example B&H, Adorama, Best Buy), the manufacturer, and established used dealers.
+- **Manufacturer refurbished:** the manufacturer's official refurb store (for example Fujifilm's), and authorized dealers selling the manufacturer's own certified refurbs.
+- **Seller refurbished and used (A/B/C):** established used dealers only (for example MPB, KEH, and the used departments of B&H and Adorama).
+- **Marketplace listings** (for example eBay), in any condition, are **never** in a median. They're shown separately and labeled **"asking prices"**, because they're active listings, not sold prices.
+
+Refurb labeling: only the manufacturer's own certified refurbs go in `mfr_refurb`. A dealer's own "refurbished" label goes in `seller_refurb`. Manufacturer refurbished is always its own condition and is never blended with used or seller refurbished.
 
 ## Code conventions
 
@@ -108,16 +112,16 @@ Comparison sellers:
 
 Fill these in as the project takes shape:
 
-- Install: `TODO`
-- Run site locally: `TODO`
-- Run tests: `TODO`
+- Install: `npm install`
+- Run site locally: `TODO` (Astro isn't set up yet)
+- Run tests: `npm test` (or `npm run test:watch` to rerun on save). Tests use Node's built-in SQLite with the real migration files.
+- Type check: `npm run typecheck`
 - Run one collector locally: `TODO`
-- Apply migrations locally: `TODO`
+- Apply migrations locally: `npm run db:migrate:local` (builds the local D1 copy in `.wrangler/`)
+- List local D1 tables: `npm run db:tables:local`
 - Deploy preview: push a branch. Production: merge to `main` (only with my approval).
 
 ## Open decisions (ask me, don't assume)
 
 - Final project name and domain (`camera-tracker` is a working name).
-- Which sources have written approval or a feed.
-- Comparison sellers for **open box**, and whether a manufacturer's own refurb store counts for **manufacturer refurbished** medians.
-- Whether to launch a Telegram channel.
+- Which sources have written approval or a feed.- Whether to launch a Telegram channel.
